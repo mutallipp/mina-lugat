@@ -1,0 +1,13 @@
+.container {
+    height: 128rpx;
+    width: 128rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container image {
+    height: 100rpx;
+    width: 100rpx;
+}

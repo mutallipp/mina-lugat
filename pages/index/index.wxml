@@ -1,0 +1,91 @@
+<show-modal wx:if="{{showModal}}"
+showModalData="{{showModalData}}"
+bindconfim="confim"/>
+<view class="kilixim" wx:if="{{!kilixim}}">
+  <view class="text">
+    <text class="title">ئەپچە ھەققىدە</text>
+    <text>1 . مەزكۇر تەرجىمان ئىقتىدارىنى قالايمىقان ئىشلىتىشكە ۋە سەزگۈر سۆز - جۈملىلەرنى قالايمىقان تەرجىمە قىلدۇرۇشقا بولمايدۇ، خىلاپلىق قىلغۇچىلار ياكى غەرەزلىك قالايمىقان ئىشلەتكۈچىلەر بارلىق ئاقىۋەتكە ئۆزى مەسئۇل بولىدۇ .</text>
+   
+    <text>2 . تەرجىمە نەتىجىسىدە بەزى خاتالىقلار ساقلانغان بولىشى مۇمكىن، شۇڭا مەزكۇر تەرجىماننىڭ تەرجىمە نەتىجىسىنى قاراتمىلىقى كۈچلۈك ھۆججەت ياكى باشقا تۈردىكى خىزمەتلەرگە بىۋاستە ئىشلەتمەسلىكىڭىزنى تەۋسىيە قىلىمىز .</text>
+    <text>3 . مەزكۇر تەرجىمان مەزكۇر تەرجىمان ئەپچىمىز پۈتۈنلەي ھەقسىز بۇلۇپ ئەپچىمىزنى كەڭ سالونچىلار سالونلىرىغا باغلىۋالسا ھەقسىز ئىشلەتسە بۇلدۇ .ئەپچەنۇمۇرى APPID:wx11625587b77116cb .</text>
+  </view>
+  <view class="btn">
+    <button bindgetuserinfo='kilixim' open-type="getUserInfo"  lang="zh_CN" class="ok">قوشۇلىمەن</button>
+    <!-- <view bindtap="accept">ياق</view> -->
+  </view>
+</view>
+
+<!--  -->
+<view  wx:if="{{kilixim==1}} " class="box_big">
+  <!-- <view class="one-text ">
+    <textarea bindinput="gettext" class="rtl"  maxlength="1500" placeholder="تەرجىمە قىلماقچى بولغان مەزمۇننى كىرگۈزۈڭ"                                 value="{{txt}}"></textarea>
+  </view > -->
+  <!-- 汉维翻译 -->
+  <view class="banner-name" bindtap="til" wx:if="{{til}}">
+    <view class="ug fill" data-now="0" data-num="0">ئۇيغۇرچە</view>
+    <view  class="language" data-now="0" data-num="0">
+      <image class="almax" src="../../img/almax_fill.png"></image>
+    </view>
+    <view class="kz">国语</view>
+  </view>
+  <!-- 维汉翻译 -->
+  <view class="banner-name" bindtap="til" wx:else>
+    <view  class="kz" data-now="0" data-num="0">国语</view>
+    <view class="language" data-now="0" data-num="0">
+      <image class="almax" src="../../img/almax_fill.png"></image>
+    </view>
+    <view class="ug fill">ئۇيغۇرچە</view>
+  </view>
+  <!-- <view class="btn_box">
+    <view class='tazlax' bindtap="tazlax" wx:if="{{netije}}">تازىلاش  </view>
+    <view class='tarjimakil' bindtap="tarjimakil"  wx:else>تەرجىمە قىلىش </view>
+  </view> -->
+  <!-- record audio -->
+  <!-- <view class="container1" wx:if="{{show}}">
+    <image class="record-animate-image" mode="widthFix" src="/resource/icon/mc.gif"></image>
+  </view>
+
+  <view class="foot-group">
+    <bottom-button class='bottom-button' >
+      <view class="button-container">
+        <view class="item-wrapper">
+            <view bindrecordEnd="recordEnd" bindrecordStart="recordStart" class="button-item" data-from="zhCN">国语</view>
+            <view catchtouchend="onTapEnd" catchtouchstart="onTapStart" class="button-item" data-from="zhUG">ئۇيغۇرچە</view>
+        </view>
+        <view class="voice-icon-wrapper">
+            <view class="container">
+                <image src="/img/gif/record.gif" wx:if="{{herket}}"></image>
+                <image src="/img/microphone.png" wx:if="{{!herket}}"></image>
+            </view>
+        </view>
+      </view>
+    </bottom-button>
+  </view> -->
+  
+
+  <view class="two-text" wx:if='{{netije}}'>
+    <!-- <image bindtap="koqur" class="" src="../../img/fuzhi.png"></image> -->
+    <text  wx:if="{{pinyin}}">\n{{pinyin}}</text>
+    <text>{{netije}}</text>
+    <image bindtap='coppy' src='../../img/coppy.png' />
+    
+  </view>
+
+
+  <scroll-view scroll-y="true" class="page-section-spacing" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <result-chat  bincuBarInputShow="cuBarInputShow"
+    bindsendTxt="bindsendTxt"
+    result="{{resultList}}"
+    bindrecordEnd="onTapEnd"
+   />
+  </scroll-view>
+</view>
+
+<loading-model id="loading-model" />
+
+
+
+
+
+
+  

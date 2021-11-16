@@ -1,0 +1,7 @@
+{
+  "usingComponents":{
+    "bottom-botton":"../../components/bottom_button/bottom_button",
+    "result-chat":"../../components/result-chat/result-chat",
+    "show-modal":"../../components/showModal/showModal"
+  }
+}

@@ -1,0 +1,18 @@
+<view catchtouchmove="{{true}}" hidden="{{!show}}">
+    <view catchtouchmove="{{true}}" class="mask"></view>
+    <view class="dialog">
+        <view class="dialog-image-wrapper" wx:if="{{image}}">
+            <image class="dialog-image" mode="widthFix" src="{{image}}"></image>
+        </view>
+        <view class="dialog-title-wrapper" wx:if="{{title}}">
+            <text class="dialog-title">{{title}}</text>
+        </view>
+        <view class="dialog-content-wrapper" wx:if="{{content}}">
+            <text class="dialog-content"> {{content}} </text>
+        </view>
+        <view class="dialog-confirm-wrapper">
+            <text catchtap="onTapOK" class="dialog-confirm" wx:if="{{!isOpen}}"> {{okText}} </text>
+            <button bindopensetting="settingCallback" catchtap="onTapOK" class="dialog-confirm" openType="openSetting" wx:if="{{isOpen}}">{{okText}}</button>
+        </view>
+    </view>
+</view>

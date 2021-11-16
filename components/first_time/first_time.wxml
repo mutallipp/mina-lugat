@@ -1,0 +1,15 @@
+<view class="container">
+    <view class="section-body">
+        <view class="translate-message">
+            <view class="text-content">
+                <view class="text-detail">请按住下面“国语”按钮翻译国语到维吾尔语</view>
+            </view>
+        </view>
+        <view class="line-between"></view>
+        <view class="translate-message">
+            <view class="text-content ">
+                <view class="text-detail text-detail-ug">ئاستىدىكى كۇنۇپكىدىن «ئۇيغۇرچە» نى بېسىپ تۇرۇپ ئۇيغۇرچە سۆزلەپ دۆلەت تىلىغا تەرجىمە قىلىڭ</view>
+            </view>
+        </view>
+    </view>
+</view>

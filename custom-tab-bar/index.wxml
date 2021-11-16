@@ -1,0 +1,20 @@
+<!--miniprogram/custom-tab-bar/index.wxml-->
+<cover-view class="tab-bar">
+  <cover-view class="tab-bar-border"></cover-view>
+  <cover-view wx:for="{{taBarList}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+    <cover-image src="{{item.selectedIconPath}}" wx:if="{{selected === index}}" class="img"></cover-image>  
+    <cover-image src="{{item.iconPath}}" wx:else class="img"></cover-image>
+    <!-- <cover-image src="{{selected === index ? item.selectedIconPath : item.iconPath}}"></cover-image> -->
+    <cover-view style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</cover-view>
+  </cover-view>
+</cover-view>
+
+<!-- <view class="tab-bar">
+  <view class="tab-bar-border"></view>
+  <view wx:for="{{taBarList}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-index="{{index}}" bindtap="switchTab">
+    <image src="{{item.selectedIconPath}}" wx:if="{{selected === index}}" class="img"></image>  
+    <image src="{{item.iconPath}}" wx:else class="img"></image>
+    <view style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</view>
+  </view>
+</view> -->
+<loading-model id="loading-model" ></loading-model>

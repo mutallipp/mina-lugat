@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/us/us",
+    "pages/logs/logs",
+    "components/bottom_button/bottom_button"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "color": "#fff",
+    "navigationBarBackgroundColor": "#4169E1",
+    "navigationBarTitleText": "维汉翻译",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#F8F8FF",
+    "selectedColor": "#fff",
+    "backgroundColor": "#4169E1",
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/us/us",
+        "text": "ئەپچە ھەققىدە",
+        "iconPath": "img/ulan.png",
+        "selectedIconPath": "img/ulan.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "تەرجىمە قىلىش ",
+        "iconPath": "img/normal/3.png",
+        "selectedIconPath": "img/selected/3.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "loading-model":"/components/loading-model/loading-model"
+  },
+  "sitemapLocation": "sitemap.json"
+}

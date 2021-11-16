@@ -1,0 +1,4 @@
+<view class="container">
+    <image src="/img/gif/record.gif" wx:if="{{herket}}"></image>
+    <image src="/img/microphone.png" wx:if="{{!herket}}"></image>
+</view>

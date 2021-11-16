@@ -1,0 +1,22 @@
+.text .title {
+    text-indent: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 18px;
+    color: #202020;
+
+}
+
+.text text {
+    display: inline-block;
+    text-indent: 1.7em;
+    padding: 3px 0;
+    line-height: 24px;
+    font-size: 13px;
+    text-align: justify;
+    direction: rtl;
+    color: #14db2f;
+    padding-left: 10px;
+    padding-right: 10px;
+}

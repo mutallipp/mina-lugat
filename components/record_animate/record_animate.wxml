@@ -1,0 +1,3 @@
+<view class="container" wx:if="{{show}}">
+    <image class="record-animate-image" mode="widthFix" src="/resource/icon/mc.gif"></image>
+</view>

@@ -1,0 +1,11 @@
+<!--components/showModal/showModal.wxml-->
+  <view class="mask"></view>
+  <view class="dialog">
+    <view class="askart">{{showModalData.content}}</view>
+    <view class='shareButton'>
+    <button class="share_btn2" bindtap='noshare'>ياق</button>
+    <button wx:if="{{showModalData.isGetUserInfo}}"  class="share_btn1" open-type="getUserInfo" bindgetuserinfo="confim" >{{showModalData.confimText}}</button>
+    <button wx:else class="share_btn1" openType="share">{{showModalData.confimText}}</button>
+    </view>
+  </view>
+

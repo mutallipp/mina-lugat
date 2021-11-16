@@ -1,0 +1,41 @@
+<!-- <cu-custom bgColor="bg-gradual-pink" isBack="{{true}}"><view slot="backText">返回</view><view slot="content">聊天</view></cu-custom> -->
+<view class="cu-chat scroll" >
+  <view wx:for="{{result}}" id="item{{index}}">
+    <view class="cu-info round" >
+      <text class="">{{item.dateTime}}</text>
+    </view>
+    <view class="cu-item {{item.isSelf? 'self':''}}">
+      <view hidden="{{item.isSelf}}" class="cu-avatar radius" style="background-image:url({{item.avatarUrl}});"></view>
+      <view class="main" bindtap="coppy" data-index="{{index}}">
+        <view class="content bg-green shadow flex-direction">
+          <text>{{item.content}}</text>
+          <view>{{item.result}}</view>
+        </view>
+      </view>
+      <!-- <view hidden="{{!item.isSelf}}"  class="cu-avatar radius" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big107000.jpg);"></view> -->
+      <view hidden="{{!item.isSelf}}"  class="cu-avatar radius" style="background-image:url({{avatarUrl}});"></view>
+      <!-- <view class="date">2018年3月23日 13:23</view> -->
+    </view>
+  </view>
+
+
+</view>
+<view wx:if="{{showKeyBoard}}" class="cu-bar foot input {{InputBottom!=48?'cur':''}}" style="bottom:{{InputBottom}}px">
+  <view class="action">
+    <text class="cuIcon-sound text-grey" bindtap="clickswitch"></text>
+  </view >
+    <input class="solid-bottom" model:value="{{inputValue}}" bindfocus="InputFocus" bindblur="InputBlur" adjust-position="{{false}}" focus="{{false}}" maxlength="300" cursor-spacing="10"></input>
+    <!-- <view class="action">
+      <text class="cuIcon-emojifill text-grey"></text>
+    </view> -->
+    <button class="cu-btn bg-green shadow" disabled="{{!inputValue}}" type="" bindtap="sendMessage">发送</button>
+
+</view>
+<view wx:else class="cu-bar foot input {{InputBottom!=48?'cur':''}}" style="bottom:{{InputBottom}}px">
+  <view class="action">
+    <text class="cuIcon-keyboard text-grey" bindtap="clickswitch"></text>
+  </view >
+  <bottom-botton  class="bottom-button"
+  bindrecordEnd="onRecordEnd"/>
+</view>
+

@@ -1,0 +1,15 @@
+/* components/result-chat/result-chat.wxss */
+/* page{
+  padding-bottom: 100rpx;
+} */
+.bottom-button{
+  width: 100%;
+}
+.cu-info.round{
+  display:flex;
+  justify-content: center;
+}
+.scroll{
+padding-bottom: 96px;
+}
+

@@ -1,0 +1,55 @@
+@import "lib/colorUI/main.wxss";
+@import "lib/colorUI/icon.wxss";
+@import "lib/font-family.wxss";
+
+
+page{
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+
+}
+
+.body {
+    margin: 0 auto;
+    font-family: UKIJ Ekran!important;
+}
+
+input {
+    font-family: UKIJ Ekran!important;
+}
+
+.ukij {
+    font-family: UKIJ Ekran!important;
+}
+
+button {
+    border: none!important;
+    border-radius: 0px;
+}
+
+button {
+    color: #000;
+}
+
+view {
+    font-family: UKIJ Ekran;
+}
+
+text {
+    margin: 0;
+    padding: 0;
+}
+
+loading {
+    font-family: UKIJ Ekran;
+}
+
+input::webkit-input-placeholder {
+    font-family: UKIJ Ekran!important;
+}
+
+p_class {
+    font-family: UKIJ Ekran!important;
+    color: #eee;
+}

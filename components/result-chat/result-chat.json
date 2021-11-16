@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "bottom-botton":"../bottom_button/bottom_button"
+  }
+}

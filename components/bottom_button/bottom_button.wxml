@@ -1,0 +1,9 @@
+<view class="button-container">
+    <view class="item-wrapper">
+        <view catchtouchend="onTapEnd" catchtouchstart="onTapStart" class="button-item" data-from="zhCN">国语</view>
+        <view catchtouchend="onTapEnd" catchtouchstart="onTapStart" class="button-item" data-from="zhUG">ئۇيغۇرچە</view>
+    </view>
+    <view class="voice-icon-wrapper">
+        <herket herket="{{touchStatus}}"></herket>
+    </view>
+</view>

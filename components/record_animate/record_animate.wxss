@@ -1,0 +1,17 @@
+.container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 216rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 777;
+}
+
+.record-animate-image {
+    width: 40%;
+    height: auto;
+    opacity: .8;
+}

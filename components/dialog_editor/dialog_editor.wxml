@@ -1,0 +1,21 @@
+<view class="container" wx:if="{{show}}">
+    <view style="padding: 0rpx 40rpx 50rpx 40rpx;width: 100%;">
+        <view class="editor-wrapper">
+            <view class="editor-title-bar">
+                <view class="editor-title">{{editor_title}}</view>
+            </view>
+            <view class="editor-box">
+                <textarea autoFocus fixed adjustPosition="{{true}}" bindblur="onTapConfirim" bindconfirm="onTapConfirim" class="editor" data-dialogid="{{dialog_id}}" placeholder="{{placeholder}}" style="direction: {{direction}}; font-family: \"ALKATIP Basma Tom\";text-align: {{align}}" value="{{text}}"></textarea>
+            </view>
+            <view class="edit-foot-bar">
+                <view class="editor-status">
+                    <view class="editor-status-text"> {{editor_status}}</view>
+                </view>
+                <view bindtap="onTapConfirim" class="editor-confirm">
+                    <image src="/resource/icon/check.png"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="tool-bar"></view>
+</view>

@@ -1,0 +1,80 @@
+.container {
+    background-color: #fafafa;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 666;
+    display: flex;
+    justify-content: center;
+}
+
+.editor-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20rpx;
+    padding-bottom: 6rpx;
+    background-color: #FFFFFF;
+}
+
+.editor-title-bar {
+    height: 50rpx;
+    border-bottom: 2rpx solid #F1F1F1;
+}
+
+.editor-title {
+    text-align: center;
+    line-height: 50rpx;
+}
+
+.editor-box {
+    width: 100%;
+}
+
+.editor {
+    padding: 15rpx;
+    height: 250rpx;
+    text-indent: 10rpx;
+    line-height: 55rpx;
+    font-size: 36rpx;
+    margin: 0 auto;
+}
+
+.edit-foot-bar {
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+}
+
+.editor-confirm {
+    width: 40rpx;
+    height: 40rpx;
+    margin-left: 10rpx;
+    margin-right: 20rpx;
+}
+
+.editor-confirm image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.editor-status {
+    flex-grow: 1;
+    height: 40rpx;
+    line-height: 40rpx;
+}
+
+.editor-status-text {
+    height: 40rpx;
+    line-height: 45rpx;
+    color: #9B9B9B;
+}
+
+.tool-bar {
+    position: absolute;
+    bottom: 20rpx;
+    left: 0;
+    right: 0;
+    height: 80rpx;
+}

@@ -1,0 +1,25 @@
+<view class="container">
+    <view class="create-time">{{created_at}}</view>
+    <view class="section-body">
+        <view class="delete-icon-wrapper">
+            <image bindtap="onTapDelete" src="/resource/icon/x.svg"></image>
+        </view>
+        <view class="send-message">
+            <view class="text-content {{language==='zhUG'?'text-content-ug':''}}">
+                <view class="text-detail {{language==='zhUG'?'text-detail-ug':''}}">{{text}}</view>
+            </view>
+            <view class="edit-icon">
+                <image bindtap="editText" class="edit-icon-img" src="/resource/icon/edit.png"></image>
+            </view>
+        </view>
+        <view class="line-between"></view>
+        <view class="translate-message">
+            <view class="text-content {{language==='zhCN'?'text-content-ug':''}}">
+                <view bindtap="onTapTranslateText" class="text-detail {{language==='zhCN'?'text-detail-ug':''}}">{{translateText}}</view>
+            </view>
+            <view class="edit-icon">
+                <image bindtap="playTranslationVoice" class="edit-icon-img" src="{{playing?'/resource/icon/playing_.gif':'/resource/icon/play_.png'}}"></image>
+            </view>
+        </view>
+    </view>
+</view>
